@@ -62,8 +62,7 @@ const AddTuGraphModal: React.FC<Props> = ({ open, onClose }) => {
     {
       graph_name: '空模版',
       description: '自行定义点边模型和数据导入。',
-      imgUrl:
-        'https://mdn.alipayobjects.com/huamei_qcdryc/afts/img/A*iLrCTZt0lAcAAAAAAAAAAAAADgOBAQ/original',
+      // imgUrl: 'https://mdn.alipayobjects.com/huamei_qcdryc/afts/img/A*iLrCTZt0lAcAAAAAAAAAAAAADgOBAQ/original',
     },
     ...TUGRAPH_DEOM,
   ];

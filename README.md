@@ -62,3 +62,9 @@ pnpm run start
 tar -czvf tugraph-db-browser.tgz ./
 ```
 `````
+发布步骤：
+1、上传tugraph-db-browser.tgz到服务器的 /home/xs/docker/data/tugraph/web/tugraph-db-browser
+2、在该目录解压，覆盖全部: tar zxvf tugraph-db-browser.tgz -C ./
+3、重启容器 tugraph : docker restart tugraph
+4、再进入容器 tugraph: docker exec -it tugraph bash  
+然后执行 sh setup.sh
