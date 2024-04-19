@@ -245,7 +245,16 @@ const ExecuteResult: React.FC<ResultProps> = ({
   }) => {
     const newNodes = map(formatData?.nodes, item => ({
       ...item,
-      style: { label: { value: item.properties?.name || item.label } },
+      style: {
+        label: {
+          value: item.properties?.name || item.label
+        },
+        keyshape: {
+          stroke: '#128075',
+          fill: '#128075',
+          fillOpacity: 0.1,
+        }
+      },
     }));
     const newEdge = map(formatData?.edges, item => ({
       ...item,
@@ -253,6 +262,10 @@ const ExecuteResult: React.FC<ResultProps> = ({
         label: {
           value: item.properties?.name || item.label,
           fill: 'rgba(0,0,0,0.85)',
+        },
+        keyshape: {
+          stroke: '#128075',
+          lineWidth: 1,
         },
       },
     }));
