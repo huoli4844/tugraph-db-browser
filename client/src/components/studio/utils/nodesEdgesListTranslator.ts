@@ -46,7 +46,7 @@ export const nodesEdgesListTranslator = (
               fill: 'rgba(0,0,0,0.85)',
             },
             keyshape: {
-              stroke: '#1650ff',
+              stroke: '#128075',
               lineWidth: 1,
             },
           },

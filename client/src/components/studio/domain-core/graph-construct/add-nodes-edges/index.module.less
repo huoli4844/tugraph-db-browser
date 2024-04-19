@@ -1,3 +1,4 @@
+@import "@/layouts/global";
 @perfix-cls: ant-tugraph;
 .@{perfix-cls}-container {
   // margin-top: 108px;
@@ -41,7 +42,7 @@
       color: rgba(106, 107, 113, 0.85);
       font-weight: 400;
       a {
-        color: rgba(22, 80, 255, 1);
+        color: rgb(18, 128, 117);
         font-weight: 400;
         cursor: pointer;
       }
@@ -50,11 +51,11 @@
   &-addbtn {
     margin: 8px 0 10px 0;
     &:hover {
-      border: 1px dashed #1650ff;
+      border: 1px dashed @myPrimaryColor;
     }
   }
   &-name:focus {
-    border: 1px solid #1650ff;
+    border: 1px solid @myPrimaryColor;
   }
   &-attr {
     margin-bottom: 16px;
@@ -65,6 +66,6 @@
     color: rgba(54, 55, 64, 1);
   }
   &-attributes {
-    background-color: #1650ff;
+    background-color: @myPrimaryColor;
   }
 }

@@ -20,8 +20,11 @@ export default defineConfig({
     `https://gw.alipayobjects.com/os/lib/antv/gi-sdk-app/${GI_SDK_APP_VERSION}/dist/index.css`,
   ],
   theme: {
-    'primary-color': '#1650ff',
-    'link-color': '#1650ff',
+    'primary-color': '#128075',
+    'link-color': '#128075',
+    'success-color': '#52c41a', // 成功色
+    'warning-color': '#faad14', // 警告色
+    'error-color': '#f5222d', // 错误色
   },
   externals: {
     react: 'React',

@@ -96,14 +96,14 @@ export const GraphList = () => {
       {state.tabKey === 'tuManage' && (
         <div className={styles[`${PUBLIC_PERFIX_CLASS}-graph-develop`]}>
           <div className={styles[`${PUBLIC_PERFIX_CLASS}-title`]}>
-            {getZhPeriod()}，欢迎来到TuGraph～
+            {getZhPeriod()}，欢迎来到知识图谱管理端v1.0.0～
           </div>
           <div className={styles[`${PUBLIC_PERFIX_CLASS}-desc`]}>
-            <span className={styles[`${PUBLIC_PERFIX_CLASS}-desc-text`]}>
-              {
-                'TuGraph 是蚂蚁集团自主研发的单机版图数据库产品，特点是单机大数据量，高吞吐率，灵活的API，同时支持高效的在线事务处理（OLTP）和在线分析处理（OLAP）'
-              }
-            </span>
+            {/*<span className={styles[`${PUBLIC_PERFIX_CLASS}-desc-text`]}>*/}
+            {/*  {*/}
+            {/*    'TuGraph 是蚂蚁集团自主研发的单机版图数据库产品，特点是单机大数据量，高吞吐率，灵活的API，同时支持高效的在线事务处理（OLTP）和在线分析处理（OLAP）'*/}
+            {/*  }*/}
+            {/*</span>*/}
             <span
               onClick={onCollapse}
               className={styles[`${PUBLIC_PERFIX_CLASS}-desc-collapse`]}
