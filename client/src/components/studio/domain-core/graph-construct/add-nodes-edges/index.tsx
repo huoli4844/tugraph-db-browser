@@ -482,10 +482,10 @@ export const AddNodesEdges: React.FC<Prop> = ({
         <div className={styles[`${PUBLIC_PERFIX_CLASS}-container-header`]}>
           <span> 添加{`${state.isNode ? '点' : '边'}`}类型</span>
           <div>
-            <span style={{ marginRight: 4 }}>命令行建模</span>
-            <a href="https://tugraph.antgroup.com/doc" target="_blank">
-              参见文档
-            </a>
+            {/*<span style={{ marginRight: 4 }}>命令行建模</span>*/}
+            {/*<a href="https://tugraph.antgroup.com/doc" target="_blank">*/}
+            {/*  参见文档*/}
+            {/*</a>*/}
           </div>
         </div>
         <div>
