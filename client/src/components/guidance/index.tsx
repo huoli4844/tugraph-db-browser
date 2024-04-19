@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocalStorageState } from 'ahooks';
-// import { Welcome } from './welcome';
+import { Welcome } from './welcome';
 import { Query } from './query';
 import { Spread } from './spread';
 import { StyleBtn, StylePanel } from './style';
@@ -114,7 +114,7 @@ export const Guidance: React.FC = () => {
   };
 
   function getGuidanceUI() {
-    // if (step === 0) return <Welcome {...props} />;
+    if (step === 0) return <Welcome {...props} />;
     if (step === 1) {
       const rect = getBoundings(SelectorSidebar);
       return <Query {...props} x={rect.right - 16} y={rect.top + 100} />;
