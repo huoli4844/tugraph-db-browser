@@ -1,3 +1,4 @@
+@import "@/layouts/global";
 @collasible-prefix-cls: ant-tugraph;
 
 .@{collasible-prefix-cls}-collasible-steps {
@@ -19,8 +20,8 @@
       display: flex;
       justify-items: center;
       width: 100%;
-      background-color: #d0dcff;
-      border-radius: 8px;
+      background-color: @myBgColor;
+      border-radius: 4px;
       padding: 20px 14px;
 
       .@{collasible-prefix-cls}-title {
@@ -40,6 +41,7 @@
         margin-right: 8px;
         font-size: 42px;
         margin-top: 3px;
+        color: @myPrimaryColor;
       }
     }
   }

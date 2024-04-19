@@ -16,12 +16,14 @@ export default defineConfig({
     type: 'browser',
   },
   styles: [
-    `https://gw.alipayobjects.com/os/lib/antd/${ANTD_VERSION}/dist/antd.css`,
-    `https://gw.alipayobjects.com/os/lib/antv/gi-sdk-app/${GI_SDK_APP_VERSION}/dist/index.css`,
+    // `https://gw.alipayobjects.com/os/lib/antd/${ANTD_VERSION}/dist/antd.css`,
+    `/lib/${ANTD_VERSION}-antd.css`,
+    // `https://gw.alipayobjects.com/os/lib/antv/gi-sdk-app/${GI_SDK_APP_VERSION}/dist/index.css`,
+    `/lib/${GI_SDK_APP_VERSION}-giSDK-index.css`
   ],
   theme: {
-    'primary-color': '#1650ff',
-    'link-color': '#1650ff',
+    'primary-color': '#128075',
+    'link-color': '#128075',
   },
   externals: {
     react: 'React',
@@ -32,14 +34,20 @@ export default defineConfig({
   },
   routes,
   headScripts: [
-    'https://gw.alipayobjects.com/os/lib/react/18.1.0/umd/react.production.min.js',
-    'https://gw.alipayobjects.com/os/lib/react-dom/18.1.0/umd/react-dom.production.min.js',
+    // 'https://gw.alipayobjects.com/os/lib/react/18.1.0/umd/react.production.min.js',
+    `/lib/react-production.min.js`,
+    // 'https://gw.alipayobjects.com/os/lib/react-dom/18.1.0/umd/react-dom.production.min.js',
+    `/lib/react-dom.production.min.js`,
 
     // <!--- Antd DEPENDENCIES-->
-    'https://gw.alipayobjects.com/os/lib/lodash/4.17.21/lodash.min.js',
-    'https://gw.alipayobjects.com/os/lib/moment/2.29.1/moment.js',
-    `https://gw.alipayobjects.com/os/lib/antd/${ANTD_VERSION}/dist/antd.min.js`,
-    `https://gw.alipayobjects.com/os/lib/antv/gi-sdk-app/${GI_SDK_APP_VERSION}/dist/index.min.js`,
+    // 'https://gw.alipayobjects.com/os/lib/lodash/4.17.21/lodash.min.js',
+    `/lib/4.17.21-lodash.min.js`,
+    // 'https://gw.alipayobjects.com/os/lib/moment/2.29.1/moment.js',
+    `/lib/2.29.1-moment.js`,
+    // `https://gw.alipayobjects.com/os/lib/antd/${ANTD_VERSION}/dist/antd.min.js`,
+    `/lib/antd.min.js`,
+    // `https://gw.alipayobjects.com/os/lib/antv/gi-sdk-app/${GI_SDK_APP_VERSION}/dist/index.min.js`,
+    `/lib/1.2.0-giSDK-min.js`,
   ],
   publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   npmClient: 'npm',

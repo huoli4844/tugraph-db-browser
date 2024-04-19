@@ -1,3 +1,4 @@
+@import "@/layouts/global";
 @perfix-cls: ant-tugraph;
 .@{perfix-cls}-construct {
   width: 100%;
@@ -36,13 +37,13 @@
       :global {
         .ant-steps-item-active {
           &:before {
-            background-color: #1650ff;
+            background-color: @myPrimaryColor;
             width: 160px;
             left: 50%;
             transform: translateX(-50%);
           }
           .ant-steps-item-icon {
-            background-color: #1650ff;
+            background-color: @myPrimaryColor;
           }
         }
         .ant-steps-item-wait {
@@ -67,8 +68,8 @@
         }
         .ant-steps-item-finish {
           .ant-steps-item-icon {
-            color: rgba(22, 80, 255, 1);
-            background-color: rgba(22, 80, 255, 0.15);
+            color: rgb(18, 128, 117);
+            background-color: @myBgColor;
           }
         }
       }

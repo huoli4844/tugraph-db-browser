@@ -282,7 +282,7 @@ export const EditNodesEdges: React.FC<Prop> = ({
           </Tooltip>
         </>
       ),
-      width: '21%',
+      // width: '21%',
       dataIndex: 'name',
       key: 'name',
       editable: true,
@@ -298,7 +298,7 @@ export const EditNodesEdges: React.FC<Prop> = ({
     {
       title: '数据类型',
       dataIndex: 'type',
-      width: '20%',
+      width: '22%',
       key: 'type',
       editable: true,
       editorConfig: (record: AttrData) => {
@@ -311,7 +311,7 @@ export const EditNodesEdges: React.FC<Prop> = ({
     {
       title: '选填',
       dataIndex: 'optional',
-      width: '20%',
+      width: '15%',
       key: 'optional',
       editable: true,
       editorConfig: (record: AttrData) => {
@@ -333,6 +333,7 @@ export const EditNodesEdges: React.FC<Prop> = ({
     },
     {
       title: '操作',
+      width: '25%',
       dataIndex: 'operate',
       key: 'operate',
       render: (_, record: any) =>
@@ -651,7 +652,7 @@ export const EditNodesEdges: React.FC<Prop> = ({
       onShow={onShow}
       onClose={onClose}
       position="right"
-      width={593}
+      width={680}
       className={styles[`${PUBLIC_PERFIX_CLASS}-container`]}
       footer={
         <>
@@ -701,10 +702,10 @@ export const EditNodesEdges: React.FC<Prop> = ({
         <div className={styles[`${PUBLIC_PERFIX_CLASS}-container-header`]}>
           <span> 编辑{`${isNode ? '点' : '边'}`}类型</span>
           <div>
-            命令行建模
-            <a href="https://tugraph.antgroup.com/doc" target="_blank">
-              参见文档
-            </a>
+            {/*命令行建模*/}
+            {/*<a href="https://tugraph.antgroup.com/doc" target="_blank">*/}
+            {/*  参见文档*/}
+            {/*</a>*/}
           </div>
         </div>
         <div>

@@ -24,8 +24,8 @@ export const Login = () => {
     await loadFull(engine);
   }, []);
 
-  const login = async () => {
-    const values = await form.validateFields();
+  const login = async (formData?:any) => {
+    const values = formData || await form.validateFields();
     setLocalData('TUGRAPH_PRE_USER', values?.userName);
     if (values) {
       try {
@@ -62,24 +62,30 @@ export const Login = () => {
     }
   };
 
-  if (localStorage.getItem('TUGRAPH_TOKEN')) {
-    // 已经登录过，则跳转到首页
-    history.push('/home');
-    return;
-  }
   useEffect(() => {
+    if (localStorage.getItem('TUGRAPH_TOKEN')) {
+      // 已经登录过，则跳转到首页
+      history.push('/home');
+      return;
+    }else{
+      login({
+        userName: 'admin',
+        password: 'Wlf@123321'
+      })
+    }
     const preUser = getLocalData('TUGRAPH_PRE_USER') || '';
     if (preUser && form && typeof preUser === 'string') {
       form.setFieldValue('userName', preUser);
     }
   }, []);
+  return;
   return (
     <div className={styles[`${PUBLIC_PERFIX_CLASS}-login-container`]}>
-      <img
-        src="https://mdn.alipayobjects.com/huamei_qcdryc/afts/img/A*AbamQ5lxv0IAAAAAAAAAAAAADgOBAQ/original"
-        alt="tugrap-logo"
-        className={styles[`${PUBLIC_PERFIX_CLASS}-logo-img`]}
-      />
+      {/*<img*/}
+      {/*  src="https://mdn.alipayobjects.com/huamei_qcdryc/afts/img/A*AbamQ5lxv0IAAAAAAAAAAAAADgOBAQ/original"*/}
+      {/*  alt="tugrap-logo"*/}
+      {/*  className={styles[`${PUBLIC_PERFIX_CLASS}-logo-img`]}*/}
+      {/*/>*/}
       <div className={styles[`${PUBLIC_PERFIX_CLASS}-login-container-left`]}>
         <div className={styles[`${PUBLIC_PERFIX_CLASS}-particles-container`]}>
           <Particles
@@ -88,10 +94,10 @@ export const Login = () => {
             options={particlesOptions}
           />
           <div className={styles[`${PUBLIC_PERFIX_CLASS}-text`]}>
-            <img
-              src="https://mdn.alipayobjects.com/huamei_qcdryc/afts/img/A*ASz1S5q2zRYAAAAAAAAAAAAADgOBAQ/original"
-              alt="tugraph-slogan"
-            ></img>
+            {/*<img*/}
+            {/*  src="https://mdn.alipayobjects.com/huamei_qcdryc/afts/img/A*ASz1S5q2zRYAAAAAAAAAAAAADgOBAQ/original"*/}
+            {/*  alt="tugraph-slogan"*/}
+            {/*></img>*/}
           </div>
         </div>
       </div>

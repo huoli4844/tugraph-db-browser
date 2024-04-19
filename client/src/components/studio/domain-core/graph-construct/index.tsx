@@ -572,6 +572,8 @@ export const GraphConstruct = () => {
           title="导入模型"
           width={480}
           visible={isModelOpen}
+          okText="确定"
+          cancelText="取消"
           onCancel={() => {
             setState(draft => {
               draft.isModelOpen = false;

@@ -119,7 +119,7 @@ export const FileUploader = (props: FileUploaderProps) => {
       {type === 'drop' ? (
         <Dragger {...uploadProps}>
           <p className="ant-upload-drag-icon">
-            <InboxOutlined style={{ color: '#1650FF' }} />
+            <InboxOutlined style={{ color: '#128075' }} />
           </p>
           <p className="ant-upload-text">点击或将文件拖拽到这里上传</p>
           <p className="ant-upload-hint">您可以通过 CSV 文件导入数据</p>

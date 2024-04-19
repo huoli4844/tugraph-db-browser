@@ -14,10 +14,10 @@ const Nav = ({ linkView = true }) => {
   return (
     <Row className={styles?.nav}>
       <Col span={3}>
-        <img
-          className={styles?.logo}
-          src="https://mdn.alipayobjects.com/huamei_qcdryc/afts/img/A*AbamQ5lxv0IAAAAAAAAAAAAADgOBAQ/original"
-        ></img>
+        {/*<img*/}
+        {/*  className={styles?.logo}*/}
+        {/*  src="https://mdn.alipayobjects.com/huamei_qcdryc/afts/img/A*AbamQ5lxv0IAAAAAAAAAAAAADgOBAQ/original"*/}
+        {/*></img>*/}
       </Col>
       <Col span={18}>
         {linkView && (

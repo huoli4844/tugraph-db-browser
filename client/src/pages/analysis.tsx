@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRafInterval } from 'ahooks';
-import { Guidance } from '@/components/guidance';
+// import { Guidance } from '@/components/guidance';
 import TuGraphGraphAppConfig from '@/constants/GI_EXPORT_FILES';
 import '../components/studio/global.less';
 
@@ -39,7 +39,7 @@ const GraphAnalysis = () => {
       }}
     >
       <GI_SDK_APP id={id} service={service} />
-      {ready && <Guidance />}
+      {/*{ready && <Guidance />}*/}
     </div>
   );
 };

@@ -99,7 +99,7 @@ const ProjectCard = ({
             type="icon-xinjiantuxiangmudeicon"
             className={styles[`${PUBLIC_PERFIX_CLASS}-plus-icon`]}
           />
-          <div style={{ color: '#1650ff', fontSize: '16px' }}>新建图项目</div>
+          <div style={{ color: '#128075', fontSize: '16px' }}>新建图项目</div>
         </ProCard>
       ) : (
         <Card
