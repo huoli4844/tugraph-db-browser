@@ -27,6 +27,11 @@ export const nodesEdgesListTranslator = (
       type: 'graphin-circle',
       style: {
         label: { value: item.labelName },
+        keyshape: {
+          stroke: '#128075',
+          fill: '#128075',
+          fillOpacity: 0.1,
+        },
       },
     }));
   }
