@@ -24,9 +24,6 @@ export default defineConfig({
   theme: {
     'primary-color': '#128075',
     'link-color': '#128075',
-    'success-color': '#52c41a', // 成功色
-    'warning-color': '#faad14', // 警告色
-    'error-color': '#f5222d', // 错误色
   },
   externals: {
     react: 'React',
