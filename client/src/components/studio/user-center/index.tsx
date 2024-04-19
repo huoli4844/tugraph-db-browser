@@ -51,13 +51,13 @@ export const UserCenter: React.FC<Prop> = () => {
   return (
     <div>
       <Space split={<Divider type="vertical" />}>
-        <Tooltip title="用户帮助">
-          <QuestionCircleOutlined
-            onClick={() => {
-              window.open(USER_HELP_LINK);
-            }}
-          />
-        </Tooltip>
+        {/*<Tooltip title="用户帮助">*/}
+        {/*  <QuestionCircleOutlined*/}
+        {/*    onClick={() => {*/}
+        {/*      window.open(USER_HELP_LINK);*/}
+        {/*    }}*/}
+        {/*  />*/}
+        {/*</Tooltip>*/}
         <Dropdown overlay={menu} trigger={['click']}>
           <a style={{ color: 'black' }}>
             {isEmpty(getLocalData('TUGRAPH_USER_NAME'))

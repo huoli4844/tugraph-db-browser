@@ -96,7 +96,7 @@ export const GraphList = () => {
       {state.tabKey === 'tuManage' && (
         <div className={styles[`${PUBLIC_PERFIX_CLASS}-graph-develop`]}>
           <div className={styles[`${PUBLIC_PERFIX_CLASS}-title`]}>
-            {getZhPeriod()}，欢迎来到知识图谱管理端v1.0.0～
+            {getZhPeriod()}，欢迎来到知识图谱管理端(v1.0.3)
           </div>
           <div className={styles[`${PUBLIC_PERFIX_CLASS}-desc`]}>
             {/*<span className={styles[`${PUBLIC_PERFIX_CLASS}-desc-text`]}>*/}
