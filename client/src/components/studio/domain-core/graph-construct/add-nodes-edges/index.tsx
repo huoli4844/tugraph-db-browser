@@ -188,7 +188,7 @@ export const AddNodesEdges: React.FC<Prop> = ({
           </Tooltip>
         </>
       ),
-      width: '38%',
+      // width: '38%',
       dataIndex: 'name',
       key: 'name',
       editable: true,
@@ -202,7 +202,7 @@ export const AddNodesEdges: React.FC<Prop> = ({
     {
       title: '数据类型',
       dataIndex: 'type',
-      width: '25%',
+      width: '22%',
       key: 'type',
       editable: true,
       editorConfig: (record: AttrData) => {
@@ -215,7 +215,7 @@ export const AddNodesEdges: React.FC<Prop> = ({
     {
       title: '选填',
       dataIndex: 'optional',
-      width: '25%',
+      width: '15%',
       key: 'optional',
       editable: true,
       editorConfig: (record: AttrData) => {
@@ -237,6 +237,7 @@ export const AddNodesEdges: React.FC<Prop> = ({
     },
     {
       title: '操作',
+      width: '25%',
       dataIndex: 'operate',
       key: 'operate',
       render: (_, record: any) => {
@@ -429,7 +430,7 @@ export const AddNodesEdges: React.FC<Prop> = ({
       onShow={onShow}
       onClose={onClose}
       position="right"
-      width={593}
+      width={680}
       className={styles[`${PUBLIC_PERFIX_CLASS}-container`]}
       footer={
         <>
