@@ -138,19 +138,20 @@ export const AccountManager: React.FC<Prop> = ({ getRefreshList }) => {
       title: '账户',
       dataIndex: 'username',
       key: 'username',
+      width: '10%',
     },
     {
       title: '账户描述',
       dataIndex: 'description',
       key: 'description',
-      width: '30%',
+      width: '15%',
       render: (text: string) => text || '-',
     },
     {
       title: permissionsTitle,
       dataIndex: 'permissions',
       key: 'permissions',
-      width: '30%',
+      width: '50%',
       render: renderPermissions,
     },
     {
@@ -162,6 +163,7 @@ export const AccountManager: React.FC<Prop> = ({ getRefreshList }) => {
     {
       title: '操作',
       render: operate,
+      width: '15%',
     },
   ];
   useEffect(() => {

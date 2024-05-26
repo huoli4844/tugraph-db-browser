@@ -14,15 +14,23 @@ const Nav = ({ linkView = true }) => {
   return (
     <Row className={styles?.nav}>
       <Col span={3}>
-        <img
-          className={styles?.logo}
-          src="https://mdn.alipayobjects.com/huamei_qcdryc/afts/img/A*AbamQ5lxv0IAAAAAAAAAAAAADgOBAQ/original"
-        ></img>
+        {/*<img*/}
+        {/*  className={styles?.logo}*/}
+        {/*  src="https://mdn.alipayobjects.com/huamei_qcdryc/afts/img/A*AbamQ5lxv0IAAAAAAAAAAAAADgOBAQ/original"*/}
+        {/*></img>*/}
       </Col>
       <Col span={18}>
         {linkView && (
           <div className={styles.links}>
-            {APP_LINKS.map(({ title, key, path }) => {
+            {APP_LINKS.filter((item: any) => {
+              if(localStorage.getItem('TUGRAPH_USER_NAME') === JSON.stringify('admin')) {
+                return true;
+              }else{
+                if(item.path === '/home') {
+                  return true;
+                }
+              }
+            }).map(({ title, key, path }) => {
               return (
                 <div
                   className={path === curPath ? styles?.linked : styles?.link}
@@ -38,11 +46,11 @@ const Nav = ({ linkView = true }) => {
           </div>
         )}
       </Col>
-      <Col span={3}>
+      {/* <Col span={3}>
         <div className={styles?.userInfo}>
           <UserCenter />
         </div>
-      </Col>
+      </Col> */}
     </Row>
   );
 };

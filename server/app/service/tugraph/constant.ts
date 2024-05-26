@@ -3,6 +3,7 @@ import env from '../../../../env.json';
 const HOST = GetEnvironmentVariables(process.env);
 
 export const HOST_URL = `http://116.205.136.234:9090`;
+// export const HOST_URL = `http://127.0.0.1:9090`;
 export const DEV_HOST_URL = 'http://127.0.0.1:9090';
 export const EngineServerURL = `${
   env?.tugraph_db_host ||

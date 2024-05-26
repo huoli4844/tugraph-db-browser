@@ -387,6 +387,9 @@ export const GraphConstruct = () => {
         message.error(`${info.file.name} 文件上传失败`);
       }
     },
+    customRequest(e: any){
+      e.onSuccess(e.file, e);
+    },
     beforeUpload: file => {
       const reader = new FileReader();
       reader.readAsText(file);
@@ -572,6 +575,8 @@ export const GraphConstruct = () => {
           title="导入模型"
           width={480}
           visible={isModelOpen}
+          okText="确定"
+          cancelText="取消"
           onCancel={() => {
             setState(draft => {
               draft.isModelOpen = false;

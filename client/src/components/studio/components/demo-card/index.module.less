@@ -1,3 +1,4 @@
+@import "@/layouts/global";
 @perfix-cls: ant-tugraph;
 .card-styles {
   width: 233px;
@@ -15,7 +16,7 @@
   .@{perfix-cls}-card-img {
     height: 127px;
     width: 201px;
-    background-color: rgba(22, 80, 255, 0.15);
+    background-color:@myBgColor;
     border-radius: 4px;
     overflow: hidden;
     img {
@@ -39,8 +40,8 @@
   }
 }
 .@{perfix-cls}-active-card {
-  border: 1px solid #1650ff;
-  background-color: rgba(22, 80, 255, 0.08);
+  border: 1px solid @myPrimaryColor;
+  background-color: @myBgColor;
 }
 .@{perfix-cls}-card-horn {
   position: absolute;

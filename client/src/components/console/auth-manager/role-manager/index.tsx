@@ -136,19 +136,20 @@ export const RoleManager: React.FC<Prop> = ({ getRefreshList }) => {
       title: '角色',
       dataIndex: 'role',
       key: 'role',
-      width: '15%',
+      width: '10%',
     },
     {
       title: '角色描述',
       dataIndex: 'description',
       key: 'description',
+      width: '15%',
       render: (text: string) => text || '-',
     },
     {
       title: permissionsTitle,
       dataIndex: 'permissions',
       key: 'permissions',
-      width: '30%',
+      width: '50%',
       render: renderPermissions,
     },
     {

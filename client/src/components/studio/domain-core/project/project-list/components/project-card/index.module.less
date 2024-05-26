@@ -1,9 +1,10 @@
+@import "@/layouts/global";
 @perfix-cls: ant-tugraph;
 .@{perfix-cls}-card-box {
   margin-top: 16px;
 
   .@{perfix-cls}-card {
-    border-radius: 8px;
+    border-radius: 4px;
 
     :global {
       .ant-card-actions {
@@ -39,9 +40,11 @@
   }
 
   .@{perfix-cls}-card:hover {
-    box-shadow: 0 6px 16px 0 rgba(12, 31, 231, 0.08),
-      0 3px 6px -4px rgba(26, 27, 37, 0.12),
-      0 9px 28px 8px rgba(26, 27, 37, 0.05);
+    //box-shadow: 0 6px 16px 0 rgba(12, 31, 231, 0.08),
+    //  0 3px 6px -4px rgba(26, 27, 37, 0.12),
+    //  0 9px 28px 8px rgba(26, 27, 37, 0.05);
+    box-shadow: 0 2px 12px #0000001a;
+    transition: all ease .3s;
   }
 
   :global {
@@ -57,20 +60,22 @@
 
   .@{perfix-cls}-create-card {
     height: 166px;
-    border-radius: 8px;
+    border-radius: 4px;
     cursor: pointer;
 
     .@{perfix-cls}-plus-icon {
       font-size: 16px;
       margin-bottom: 17px;
-      color: #1650ff;
+      color: @myPrimaryColor;
     }
   }
 
   .@{perfix-cls}-create-card:hover {
-    box-shadow: 0 6px 16px 0 rgba(26, 27, 37, 0.08),
-      0 3px 6px -4px rgba(26, 27, 37, 0.12),
-      0 9px 28px 8px rgba(26, 27, 37, 0.05);
+    //box-shadow: 0 6px 16px 0 rgba(26, 27, 37, 0.08),
+    //  0 3px 6px -4px rgba(26, 27, 37, 0.12),
+    //  0 9px 28px 8px rgba(26, 27, 37, 0.05);
+    box-shadow: 0 2px 12px #0000001a;
+    transition: all ease .3s;
   }
 
   .@{perfix-cls}-icon-button:hover {
@@ -78,7 +83,8 @@
   }
 
   .@{perfix-cls}-action-button {
-    color: rgba(22, 80, 255, 1);
+    //color: rgba(22, 80, 255, 1);
+    color: @myPrimaryColor;
   }
 
   .@{perfix-cls}-disabled-action-buttonButton {
@@ -114,7 +120,7 @@
         &-icon {
           height: 19.5px;
           width: 19.5px;
-          background-color: #1650ff;
+          background-color: @myPrimaryColor;
           color: #fff;
           line-height: 19.5px;
           border-radius: 3px;

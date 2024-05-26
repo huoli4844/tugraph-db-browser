@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import { EggAppConfig, PowerPartial } from 'egg';
 
 export default () => {

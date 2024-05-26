@@ -13,6 +13,33 @@ import DEFAULT_STYLE_CONFIG from '@/constants/DEFAULT_STYLE_CONFIG';
 
 import styles from './index.module.less';
 import { HOLD_TIME } from '../utils/request';
+import {JSEncrypt} from 'jsencrypt'
+
+const getUserData = () => {
+  /** 解密 */
+  const privateKey  = '-----BEGIN PRIVATE KEY-----\n'+
+  'MIIBVQIBADANBgkqhkiG9w0BAQEFAASCAT8wggE7AgEAAkEAyv+KXPS8slWRHj8U\n'+
+  'lsILdGQ/X6PPm2m0zqmXDIJyyg+yKI8DcVYULdRcT1fAgOTaq4pzXNkrr8zZGSdR\n'+
+  '0MkhHwIDAQABAkAMfGFHTGpa0baGVLzwdOj9dLkNKec4GO1dFMNMqq1izi5IVxr9\n'+
+  '44XDaxWEncH3YZx0U3xcxs71rmITl/yxxndhAiEA7FwvyD3nT968ooglYqfG2wfr\n'+
+  'eWfJ+PH0JHY3Ulht+U8CIQDb3a9bZlVSgbfVO4aKfDtpw8J/PlYnNzAr15TYjhDH\n'+
+  'MQIhAOqu3gLE9FepoUMAS56ZWClCw9vX4gL8up05g9SPWSKhAiBrXIr+dLABQ/qC\n'+
+  'kziVcyiH8uGMxOHI8HgDUJgMTwL+YQIhANL3Z/z3FKPYjHR9Rq6gLUnfcsy33zc5\n'+
+  'C9M/hRPFjiaT\n'+
+  '-----END PRIVATE KEY-----';
+  const decrypt = new JSEncrypt();
+  decrypt.setPrivateKey(privateKey);
+  let query: any =window.location.href?.split("?")[1] || "";
+  if(query) {
+    let queryObj: any = {};
+    let queryList: any = query.split('&');
+    queryList.forEach((item: any) => {
+      let q: any = item.split('=');
+      queryObj[q[0]] = decrypt.decrypt(q[1])
+    })
+    return queryObj
+  }
+}
 
 const { Item, useForm } = Form;
 
@@ -24,8 +51,8 @@ export const Login = () => {
     await loadFull(engine);
   }, []);
 
-  const login = async () => {
-    const values = await form.validateFields();
+  const login = async (formData?:any) => {
+    const values = formData || await form.validateFields();
     setLocalData('TUGRAPH_PRE_USER', values?.userName);
     if (values) {
       try {
@@ -62,24 +89,31 @@ export const Login = () => {
     }
   };
 
-  if (localStorage.getItem('TUGRAPH_TOKEN')) {
-    // 已经登录过，则跳转到首页
-    history.push('/home');
-    return;
-  }
   useEffect(() => {
+    localStorage.removeItem('TUGRAPH_TOKEN')
+    if (localStorage.getItem('TUGRAPH_TOKEN')) {
+      // 已经登录过，则跳转到首页
+      history.push('/home');
+      return;
+    }else{
+      let query: any = getUserData();
+      if(query && query.userName && query.password) {
+        login(query)
+      }
+    }
     const preUser = getLocalData('TUGRAPH_PRE_USER') || '';
     if (preUser && form && typeof preUser === 'string') {
       form.setFieldValue('userName', preUser);
     }
   }, []);
+  return;
   return (
     <div className={styles[`${PUBLIC_PERFIX_CLASS}-login-container`]}>
-      <img
-        src="https://mdn.alipayobjects.com/huamei_qcdryc/afts/img/A*AbamQ5lxv0IAAAAAAAAAAAAADgOBAQ/original"
-        alt="tugrap-logo"
-        className={styles[`${PUBLIC_PERFIX_CLASS}-logo-img`]}
-      />
+      {/*<img*/}
+      {/*  src="https://mdn.alipayobjects.com/huamei_qcdryc/afts/img/A*AbamQ5lxv0IAAAAAAAAAAAAADgOBAQ/original"*/}
+      {/*  alt="tugrap-logo"*/}
+      {/*  className={styles[`${PUBLIC_PERFIX_CLASS}-logo-img`]}*/}
+      {/*/>*/}
       <div className={styles[`${PUBLIC_PERFIX_CLASS}-login-container-left`]}>
         <div className={styles[`${PUBLIC_PERFIX_CLASS}-particles-container`]}>
           <Particles
@@ -88,10 +122,10 @@ export const Login = () => {
             options={particlesOptions}
           />
           <div className={styles[`${PUBLIC_PERFIX_CLASS}-text`]}>
-            <img
-              src="https://mdn.alipayobjects.com/huamei_qcdryc/afts/img/A*ASz1S5q2zRYAAAAAAAAAAAAADgOBAQ/original"
-              alt="tugraph-slogan"
-            ></img>
+            {/*<img*/}
+            {/*  src="https://mdn.alipayobjects.com/huamei_qcdryc/afts/img/A*ASz1S5q2zRYAAAAAAAAAAAAADgOBAQ/original"*/}
+            {/*  alt="tugraph-slogan"*/}
+            {/*></img>*/}
           </div>
         </div>
       </div>

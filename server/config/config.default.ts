@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
 import path from 'path';
 
@@ -43,10 +41,13 @@ export default (appInfo: EggAppInfo) => {
       enable: false,
       // ignoreJSON: true
     },
+    xframe:{
+      enable:false,
+    },
   };
 
   config.cors = {
-    origin: (ctx: any) => ctx?.get('origin'),
+    origin: ctx => ctx.get('origin'),
     credentials: true,
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
   };

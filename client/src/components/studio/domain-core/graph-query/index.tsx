@@ -293,14 +293,14 @@ export const GraphQuery = () => {
         ))}
       </Tabs>
       <Space>
-        <Tooltip title="用户帮助">
-          <QuestionCircleOutlined
-            style={{ color: 'rgba(147,147,152,1)' }}
-            onClick={() => {
-              window.open(USER_HELP_LINK);
-            }}
-          />
-        </Tooltip>
+        {/*<Tooltip title="用户帮助">*/}
+        {/*  <QuestionCircleOutlined*/}
+        {/*    style={{ color: 'rgba(147,147,152,1)' }}*/}
+        {/*    onClick={() => {*/}
+        {/*      window.open(USER_HELP_LINK);*/}
+        {/*    }}*/}
+        {/*  />*/}
+        {/*</Tooltip>*/}
         <Popover
           title="存储过程"
           placement="bottomRight"

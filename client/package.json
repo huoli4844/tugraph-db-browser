@@ -25,6 +25,7 @@
     "antd": "^4.24.8",
     "copy-to-clipboard": "^3.3.3",
     "immer": "^9.0.19",
+    "jsencrypt": "^3.3.2",
     "json-bigint": "^1.0.0",
     "lodash": "4.17.21",
     "moment": "^2.29.4",

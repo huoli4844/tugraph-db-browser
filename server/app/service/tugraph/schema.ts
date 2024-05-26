@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 /**
  * Schema 相关，主要包括以下几部分内容：
  * 1. 创建 Schema
@@ -527,7 +525,8 @@ class TuGraphSchemaService extends Service {
    */
   async statisticsSchemaCount(graphName: string) {
     const vertexCypher = `CALL db.vertexLabels() YIELD label RETURN count(label) AS vertexNumLabels`;
-    const edgeCypher = `CALL db.edgeLabels() YIELD edgeLabels RETURN count(edgeLabels) AS edgeNumLabels`;
+    // const edgeCypher = `CALL db.edgeLabels() YIELD edgeLabels RETURN count(edgeLabels) AS edgeNumLabels`;
+    const edgeCypher = ` CALL db.edgeLabels() YIELD label RETURN count(label) AS edgeNumLabels`;
 
     const vertexResult = await this.ctx.curl(`${EngineServerURL}/cypher`, {
       headers: {

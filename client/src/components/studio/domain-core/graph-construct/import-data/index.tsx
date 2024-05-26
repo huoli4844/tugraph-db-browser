@@ -299,13 +299,13 @@ export const ImportData: React.FC<Prop> = ({
           <div className={styles[`${PUBLIC_PERFIX_CLASS}-container-header`]}>
             <span>数据导入</span>
             <div>
-              命令行导入
-              <a
-                href="https://tugraph-db.readthedocs.io/zh-cn/latest/6.utility-tools/1.data-import.html"
-                target="_blank"
-              >
-                参见文档
-              </a>
+              {/*命令行导入*/}
+              {/*<a*/}
+              {/*  href="https://tugraph-db.readthedocs.io/zh-cn/latest/6.utility-tools/1.data-import.html"*/}
+              {/*  target="_blank"*/}
+              {/*>*/}
+              {/*  参见文档*/}
+              {/*</a>*/}
             </div>
           </div>
           <div>

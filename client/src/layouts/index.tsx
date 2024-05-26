@@ -4,6 +4,9 @@ import React, { useEffect } from 'react';
 import { Outlet, useLocation, history } from 'umi';
 import styles from './index.less';
 import './global.less';
+import './reset.less';
+import './theme.less'
+import './timeline.less'
 import { addQueryParam } from '@/components/studio/utils/url';
 
 export const Container = (props: React.ComponentProps<any>) => {

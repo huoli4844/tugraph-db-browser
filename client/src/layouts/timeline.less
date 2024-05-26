@@ -1,0 +1,52 @@
+@import "timeline";
+/* 时间轴 */
+.vis-timeline {
+    height: 100% !important;
+    /* border: 1px solid #128075; */
+    border: unset!important;
+    /* 网格线 */
+    .vis-time-axis .vis-grid.vis-minor {
+        border-color: rgba(18, 128, 117, 0.2);
+    }
+
+    .vis-time-axis .vis-grid.vis-major {
+        border-color: rgba(18, 128, 117, 0.6);
+    }
+
+    /* 节点 */
+    .vis-item {
+        background-color: rgba(18, 128, 117, 0.1);
+        border-color: rgba(18, 128, 117, 0.6);
+        border-width: 1px;
+        color: #1a1a1a;
+        display: inline-block;
+        position: absolute;
+        z-index: 1;
+    }
+
+    /* 节点定位点 */
+    .vis-item.vis-dot {
+        border-color: rgba(18, 128, 117, 1);
+        border-radius: 4px;
+        border-style: solid;
+        border-width: 4px;
+        padding: 0;
+        position: absolute;
+    }
+    /* 时间刻度轴线 */
+    .vis-panel.vis-center {
+        border-top: unset;
+        border-left: unset;
+        border-right: unset;
+        border-color: rgba(18, 128, 117, 0.2);
+    }
+
+    /* 当前时间线 */
+    .vis-current-time {
+        /* background-color: #ff7f6e; */
+        background-color: #288ffa;
+        pointer-events: none;
+        width: 2px;
+        z-index: 1
+    }
+}
