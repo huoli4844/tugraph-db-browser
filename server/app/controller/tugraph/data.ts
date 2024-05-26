@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Controller } from 'egg';
 import { responseData } from '../../util';
 

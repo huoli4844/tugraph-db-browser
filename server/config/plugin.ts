@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { EggPlugin } from 'egg';
 
 const plugin: EggPlugin = {

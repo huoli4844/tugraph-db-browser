@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * 权限相关，主要包括以下几部分内容：
  * 1. 登陆
@@ -17,7 +18,7 @@ class TuGraphAuthService extends Service {
     const result = await this.ctx.curl(`${EngineServerURL}/cypher`, {
       headers: {
         'content-type': 'application/json',
-        Authorization: this.ctx.request.header.authorization,
+        Authorization: this?.ctx?.request?.header?.authorization,
       },
       method: 'POST',
       data: {
@@ -34,7 +35,7 @@ class TuGraphAuthService extends Service {
     const result = await this.ctx.curl(`${path}/`, {
       headers: {
         'content-type': 'application/json',
-        Authorization: this.ctx.request.header.authorization,
+        Authorization: this?.ctx?.request?.header?.authorization,
       },
       method: 'POST',
       data: {

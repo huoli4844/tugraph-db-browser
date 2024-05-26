@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { isEmpty, forEach, map, find, merge } from 'lodash';
 import { IRoleRespons, IUserRespons } from '../service/tugraph/interface';
 

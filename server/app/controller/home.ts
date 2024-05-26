@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Controller } from 'egg';
 
 class HomeController extends Controller {

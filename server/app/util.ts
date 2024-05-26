@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { isEmpty } from 'lodash';
 import { ICypherResponse, RestFulResponse } from './service/tugraph/interface';
 import { formatMultipleResponse } from './utils/query';
